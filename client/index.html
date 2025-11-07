@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Collaborative Canvas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Header Section -->
+    <header class="app-header">
+      <div class="brand">
+        <h1>🖌️ Collaborative Canvas</h1>
+      </div>
+      <div class="session-controls">
+        <label>Room:
+          <input id="room-id" type="text" value="default" />
+        </label>
+        <label>User:
+          <input id="username" type="text" placeholder="Enter your name" />
+        </label>
+        <button id="join-room" class="primary-btn">Join Room</button>
+      </div>
+    </header>
+
+    <!-- Toolbar Section -->
+    <section class="toolbar">
+      <div class="tools">
+        <button id="brush" title="Brush Tool">🖋 Brush</button>
+        <button id="eraser" title="Eraser Tool">🧽 Eraser</button>
+        <label>Color: <input id="color" type="color" value="#000000" /></label>
+        <label>Width: <input id="width" type="range" min="1" max="60" value="4" /></label>
+        <button id="undo">↩ Undo</button>
+        <button id="redo">↪ Redo</button>
+        <button id="clear-canvas">🗑 Clear</button>
+      </div>
+    </section>
+
+    <!-- Main Layout -->
+    <main class="workspace">
+      <div id="canvas-wrap">
+        <canvas id="draw-canvas" width="1200" height="700"></canvas>
+      </div>
+
+      <aside class="user-panel">
+        <h3>Online Users</h3>
+        <ul id="user-list"></ul>
+      </aside>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>Built for Real-Time Collaboration Challenge — Vanilla JS Edition</p>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
