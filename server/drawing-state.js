@@ -13,6 +13,7 @@ class DrawingState {
     }
   }
 
+  
   addOperation(roomId, op) {
     this._ensure(roomId);
     // ensure id and timestamp
