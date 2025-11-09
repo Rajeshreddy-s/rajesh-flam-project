@@ -17,4 +17,3 @@ Open http://localhost:3000 in multiple browsers/tabs.
 - Undo currently reverts last global stroke (change to per-user undo if desired).
 - Redo revives most recent tombstoned stroke (simplified).
 
-Time spent: X hours.
